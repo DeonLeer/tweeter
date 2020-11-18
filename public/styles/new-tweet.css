@@ -9,7 +9,27 @@ button {
   padding-right: 10px;
   font-size: 60%;
 }
-#button-stuff {
+section {
+  width: 100%;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+div {
   display: flex;
   justify-content: space-between;
+}
+textarea {
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  margin-bottom: 15px;
+  width: 100%;
+  resize: none;
+  height: 60px;
 }
