@@ -1,0 +1,15 @@
+button {
+  color: white;
+  background-color: blue;
+  font-family: 'Bungee';
+  border-width: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 60%;
+}
+#button-stuff {
+  display: flex;
+  justify-content: space-between;
+}

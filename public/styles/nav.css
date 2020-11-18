@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  box-sizing: border-box;
+  padding: 1.5em;
+  justify-content: space-between;
+}
+.Tweeter-Logo {
+  font-family: 'Bungee';
+}
