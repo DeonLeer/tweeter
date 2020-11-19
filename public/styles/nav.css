@@ -6,6 +6,10 @@ nav {
   box-sizing: border-box;
   padding: 1.5em;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
 }
 .Tweeter-Logo {
   font-family: 'Bungee';

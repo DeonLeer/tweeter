@@ -9,8 +9,9 @@ button {
   padding-right: 10px;
   font-size: 60%;
 }
-section {
+.new-tweet {
   width: 100%;
+  margin-bottom: 20px;
 }
 h2 {
   display: flex;
@@ -32,4 +33,7 @@ textarea {
   width: 100%;
   resize: none;
   height: 60px;
+}
+textarea:focus {
+  outline: none;
 }
