@@ -1,4 +1,4 @@
-.tweet {
+.tweets-container {
   border: solid;
   border-color: black;
   padding: 5px;
@@ -29,7 +29,7 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.tweet:hover {
+.tweets-container:hover {
   text-shadow: 1px 1px black;
   box-shadow: 10px 10px grey;
 }

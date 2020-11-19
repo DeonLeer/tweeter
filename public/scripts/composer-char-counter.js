@@ -11,7 +11,7 @@ $(document).ready(function() {
     charCount = 140 - ($(this).val().length);
     
 
-    $(this).parent().children().last().children().last().val(charCount)
+    $(this).parent().children().last().children().last().val(charCount);
 
 
   })

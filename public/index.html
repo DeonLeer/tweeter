@@ -18,11 +18,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css"/>
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -36,7 +32,7 @@
       </div>
     </nav>
     <header class="main-header">
-      <div>
+      <div class="image">
           <img src="/images/profile-hex.png"> 
       </div>
       <div>
@@ -56,20 +52,25 @@
           </div>
         </form>
       </section>
-      <article class="tweet">
-        <header class="tweet-header">
-          <div>
-            <img src="/images/profile-hex.png" class="img-tweet"><p>Name</p>
-          </div>
-          <p>@name</p>
-        </header>
-        <p class="tweet-content">This is a tweet</p>
-        <footer>
-          <p class="tweet-info">x days ago</p>
-          <p class="tweet-info">likes</p>
-        </footer>
-      </article>
+      <div id="tweets">
+        <article class="tweets-container">
+          <header class="tweet-header">
+            <div>
+              <img src="/images/profile-hex.png" class="img-tweet"><p>Name</p>
+            </div>
+            <p>@name</p>
+          </header>
+          <p class="tweet-content">This is a tweet</p>
+          <footer>
+            <p class="tweet-info">x days ago</p>
+            <p class="tweet-info">likes</p>
+          </footer>
+        </article>
+      </div>
     </main>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="scripts/client.js"></script>
     <script src="scripts/composer-char-counter.js"></script>
   </body>
 </html>

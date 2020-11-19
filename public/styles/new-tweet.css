@@ -21,7 +21,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-div {
+.image {
   display: flex;
   justify-content: space-between;
 }
