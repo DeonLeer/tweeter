@@ -1,17 +1,21 @@
 $(document).ready(function() {
 
-
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   const createTweetElement = function (tweet) { 
     let $tweet = 
     $(`<article class="tweets-container">
     <header class="tweet-header">
-      <div>
-        <img src="${tweet.user.avatars}" class="img-tweet"><p>${tweet.user.name}</p>
+      <div class="pfp-name">
+        <img src="${tweet.user.avatars}" class="img-tweet"><span>${tweet.user.name}</span>
       </div>
       <p>${tweet.user.handle}</p>
     </header>
-    <p class="tweet-content">${tweet.content.text}</p>
+      <p class="tweet-content">${escape(tweet.content.text)}</p>
     <footer>
       <p class="tweet-info">${tweet.created_at}</p>
       <p class="tweet-info">likes</p>
@@ -43,11 +47,10 @@ $(document).ready(function() {
       event.preventDefault();
       const tweetLength = ($("textarea").val()).length;
       if (tweetLength <= 0) {
-        return alert('Type something!')
+        return $(".alert-empty").slideDown();
       } 
       if (tweetLength > 140){
-        console.log('2nd logical')
-        return alert('Too long!')
+        return $(".alert-long").slideDown();
       }
       const $tweet = $(this).serialize();
       $.post("/tweets", $tweet)
@@ -56,6 +59,7 @@ $(document).ready(function() {
           const newTweet = data[data.length - 1];
           const $newTweet = createTweetElement(newTweet);
           $('#tweets').prepend($newTweet);
+          $("textarea").val("");
         })
       })
     });

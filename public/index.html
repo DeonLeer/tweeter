@@ -42,7 +42,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div class="alert-long">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          Your tweet is too long.
+        </div>
+        <div class="alert-empty">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          Your tweet is empty.
+        </div>
         <form action="/tweets/" method="POST">
           <!-- label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -55,8 +62,8 @@
       <div id="tweets">
         <article class="tweets-container">
           <header class="tweet-header">
-            <div>
-              <img src="/images/profile-hex.png" class="img-tweet"><p>Name</p>
+            <div class="pfp-name">
+              <img src="/images/profile-hex.png" class="img-tweet"><span>Name</span>
             </div>
             <p>@name</p>
           </header>
