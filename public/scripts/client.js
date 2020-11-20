@@ -36,7 +36,7 @@ $(document).ready(function() {
     </header>
     <p class="tweet-content">${tweet.content.text}</p>
     <footer>
-      <p class="tweet-info">${tweet.content.created_at}</p>
+      <p class="tweet-info">${tweet.created_at}</p>
       <p class="tweet-info">likes</p>
     </footer>
     </article>`)
@@ -54,3 +54,16 @@ $(document).ready(function() {
   renderTweets(data);
 
 })
+
+
+
+
+
+$(function() {
+  $("form").on( "submit", function( event ) {
+    event.preventDefault();
+    const $tweet = $(this).serialize();
+    $.post("/tweets", $tweet)
+  });
+});
+
