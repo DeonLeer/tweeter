@@ -41,6 +41,14 @@ $(document).ready(function() {
   $(function() {
     $("form").on( "submit", function( event ) {
       event.preventDefault();
+      const tweetLength = ($("textarea").val()).length;
+      if (tweetLength <= 0) {
+        return alert('Type something!')
+      } 
+      if (tweetLength > 140){
+        console.log('2nd logical')
+        return alert('Too long!')
+      }
       const $tweet = $(this).serialize();
       $.post("/tweets", $tweet)
       .then(function () {
@@ -52,9 +60,7 @@ $(document).ready(function() {
       })
     });
   });
-  
-
 })
 
-
+//($("textarea").val())
 
