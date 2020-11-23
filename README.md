@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+
+## Screenshots
+!["Screenshot of desktop version"](https://raw.githubusercontent.com/DeonLeer/tweeter/master/docs/desktop.png)
+!["Screenshot of mobile version"](https://raw.githubusercontent.com/DeonLeer/tweeter/master/docs/mobile.png)
