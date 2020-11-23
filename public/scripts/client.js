@@ -7,7 +7,10 @@ $(document).ready(function() {
   }
 
   const createTweetElement = function (tweet) { 
-    let $tweet = 
+    let timestamp = tweet.created_at;
+    dateObj = new Date(timestamp); 
+    dateString = dateObj.toUTCString(); 
+    let $tweet =
     $(`<article class="tweets-container">
     <header class="tweet-header">
       <div class="pfp-name">
@@ -17,8 +20,8 @@ $(document).ready(function() {
     </header>
       <p class="tweet-content">${escape(tweet.content.text)}</p>
     <footer>
-      <p class="tweet-info">${tweet.created_at}</p>
-      <p class="tweet-info">likes</p>
+      <p class="tweet-info">${dateString}</p>
+      <p tag="likes">❤️♻️🚩️</p>
     </footer>
     </article>`)
     return $tweet;
@@ -28,7 +31,7 @@ $(document).ready(function() {
     for (let tweet of tweets) {
       
       let $tweet = createTweetElement(tweet)
-      $('#tweets').prepend($tweet); 
+      $('#tweetsarea').prepend($tweet); 
     }
   }
 
@@ -58,8 +61,9 @@ $(document).ready(function() {
         $.get("/tweets", function(data) {
           const newTweet = data[data.length - 1];
           const $newTweet = createTweetElement(newTweet);
-          $('#tweets').prepend($newTweet);
+          $('#tweetsarea').prepend($newTweet);
           $("textarea").val("");
+          $(".counter").val('140');
         })
       })
     });

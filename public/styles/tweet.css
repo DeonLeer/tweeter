@@ -10,7 +10,7 @@
   align-items: end;
 }
 .img-tweet {
-  height: 90px;
+  height: 45px;
 }
 a {
   display: flex;
@@ -20,8 +20,13 @@ a {
   margin: 0px;
   padding: 20px;
   border-bottom: solid;
+  overflow-wrap: anywhere;
 }
 .tweet-info {
+  margin: 20px;
+  font-size: 20px;
+}
+#likes {
   margin: 20px;
   font-size: 25px;
 }
@@ -32,4 +37,10 @@ footer {
 .tweets-container:hover {
   text-shadow: 1px 1px black;
   box-shadow: 10px 10px grey;
+}
+.tweets {
+  display: block;
+}
+#tweetsarea {
+  font-size: 25px;
 }
